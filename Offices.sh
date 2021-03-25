@@ -3,8 +3,8 @@ THIS_DIR=$(cd $(dirname $0); pwd)
 Version=`lsb_release -rs | cut -f1 -d"."`
 install() {
 echo -e "\033[0;36m"
-echo -e "~ Welcome To Source DevProx - اهلا بك في سورس ديف بروكس ~"
-echo -e "     ~ { Setting Up Offices - جاري رفع المكاتب } ~"
+echo -e "~ Welcome To Source ToBacK"
+echo -e "    Setting Up Offices ToBacK "
 echo -e "\033[0m"
 sudo apt-get update -y
 sudo apt-get upgrade -y
@@ -43,18 +43,17 @@ sudo luarocks install luautf8
 cd .. ;sudo rm -rf luarocks*
 sudo timedatectl set-timezone Asia/Baghdad
 echo -e "\033[0;36m"
-echo -e "---------------------------------------------"
-echo -e "|    ____             ____                  |"
-echo -e "|   |  _ \  _____   _|  _ \ _ __ _____  __  |"
-echo -e "|   | | | |/ _ \ \ / / |_) | '__/ _ \ \/ /  |"
-echo -e "|   | |_| |  __/\ V /|  __/| | | (_) >  <   |"
-echo -e "|   |____/ \___| \_/ |_|   |_|  \___/_/\_\  |"
-echo -e "|-------------------------------------------|"
-echo -e "|This Source Was Developed By (ABS) @IQ_ABS.|"
-echo -e "|  This Is The Source Channel @Dev_Prox .   |"
-echo -e "|               - DevProx -                 |"
-echo -e "---------------------------------------------"
-echo -e "\033[0m"
+echo -e " ----------sajad------------------- "
+echo -e " _       _               _   _ "
+echo -e " (_   _)     (  _ \            ( ) ( ) "
+echo -e " | |    _  | (_) )  _ _   _| |/ / "
+echo -e "  | |  / _ \|  _ ( / _  )/ _)   (  "
+echo -e "  | | ( (_) ) (_) ) (_| | (_| |\ \ "
+echo -e "  (_)  \___/(____/ \__ _)\____)_) (_) "
+echo -e " 
+echo -e " - Channel : @TOOBK "
+echo -e " - DEVELOPER : @JJEJJ "
+echo -e " \033[0m"
 cd $THIS_DIR && sudo chmod +x tg
 lua DevProx.lua
 }
@@ -66,5 +65,5 @@ echo -e "\033[0;31m\n~ The tg File Was Not Found In The Bot Files\n\033[0;33m"
 exit 1
 fi
 cd $THIS_DIR && sudo chmod +x tg
-lua DevProx.lua
+lua Offices.sh.lua
 fi
